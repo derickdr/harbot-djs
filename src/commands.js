@@ -3,7 +3,7 @@ export const IDIOT_COMMAND = {
     description: 'add \"idiot\" role to a member.',
   };
   
-export const INVITE_COMMAND = {
+export const UNIDIOT_COMMAND = {
     name: 'not idiot',
     description: 'remove \"idiot\" role from a member.',
 };
