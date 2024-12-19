@@ -4,9 +4,9 @@ Discord Bot built for [The Deck](https://discord.gg/cdgQFH29se), the home of [Ke
 
 ## Dev TODO
 
- [ ] build command index
- [ ] hardcode command returns
- [ ] determine host
+ [ ] build command index  
+ [ ] hardcode command returns  
+ [ ] determine host  
 
 ## Maintainers
     Lead Maintainer: dog
