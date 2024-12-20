@@ -11,7 +11,6 @@ module.exports = {
 		.setName('stare')
 		.setDescription('Stare at the screen with a random animal'),
 	async execute(interaction) {
-        console.log(`Current path is ${imagesPath}`);
         index = Math.floor(Math.random()*numOfImages);
         randomImage = path.join(imagesPath,imageFiles[index]);
 		await interaction.reply({files: [{ attachment: randomImage}]});
