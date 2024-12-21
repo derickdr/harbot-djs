@@ -18,6 +18,10 @@ module.exports = {
             await interaction.reply({ content: 'User does not exist', flags: MessageFlags.Ephemeral });
             return;
         }
+        if(!interaction.member.permissions.has("268435456")){
+            await interaction.reply({ content: 'yo broke ass aint got permission', flags: MessageFlags.Ephemeral });
+            return;
+        }
         console.log(`Sending the idiot message to ${target.displayName}...`);
         console.log(`Removing the idiot role...`);
         await interaction.guild.members.removeRole({role: idiotRoleId, user: target});
