@@ -6,10 +6,9 @@ const rest = new REST().setToken(token);
 // ...
 
 // for guild-based commands
-/*
 rest.put(Routes.applicationGuildCommands(clientId, testServerId), { body: [] })
 	.then(() => console.log('Successfully deleted all guild commands.'))
-	.catch(console.error);*/
+	.catch(console.error);
 
 // for global commands
 rest.put(Routes.applicationCommands(clientId), { body: [] })
