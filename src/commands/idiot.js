@@ -21,6 +21,10 @@ module.exports = {
             await interaction.reply({ content: 'User does not exist', flags: MessageFlags.Ephemeral });
             return;
         }
+        if(!interaction.member.permissions.has("268435456")){
+            await interaction.reply({ content: 'yo broke ass aint got permission', flags: MessageFlags.Ephemeral });
+            return;
+        }
         const timeInMinutes = interaction.options.getNumber('time') ?? 0;
         console.log(`Sending the idiot message to ${target.displayName}...`);
 		await interaction.reply(`${target.displayName} you are an IDIOT!`);
