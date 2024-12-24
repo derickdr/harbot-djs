@@ -31,7 +31,7 @@ const rest = new REST().setToken(token);
 			Routes.applicationCommands(clientId),
 			//Routes.applicationGuildCommands(clientId, harstemServerId),
 			//Routes.applicationGuildCommands(clientId, testServerId),
-			{ body: commands },
+			{ body: commands }
 		);
 
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);

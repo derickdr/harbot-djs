@@ -1,6 +1,6 @@
 const {SlashCommandBuilder , MessageFlags} = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
-const {testServerIdiotRole, harstemServerIdiotRole, harstemServerId, testServerId} = require("../config.json");
+const {testServerIdiotRole, harstemServerIdiotRole, harstemServerId, testServerId, monkeyServerIdiotRole} = require("../config.json");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -14,7 +14,17 @@ module.exports = {
             option.setName('time')
                   .setDescription('Time to be spent in idiot channel')),
 	async execute(interaction) {
-        const idiotRoleId = interaction.guild.id == testServerId ? testServerIdiotRole: harstemServerIdiotRole;
+        const idiotRoleId = null;
+        switch(interaction.guild.id){
+            case testServerId: //For the test server
+                idiotRoleId = testServerIdiotRole;
+                break;
+            case harstemServerId: //For the Harstem server
+                idiotRoleId = harstemServerIdiotRole;
+                break;
+            default: //For the monkey server
+                idiotRoleId = monkeyServerIdiotRole;
+        }
         console.log(`Idiot role id is: ${idiotRoleId}`);
         const target = interaction.options.getMember('target');
         if(!target){

@@ -11,8 +11,20 @@ module.exports = {
                   .setDescription('The user to unidiot')
                   .setRequired(true)),
 	async execute(interaction) {
-        const idiotRoleId = interaction.guild.id == testServerId ? testServerIdiotRole: harstemServerIdiotRole;
+        //Check which server it is and assign the appropriate idiot role ID
+        const idiotRoleId = null;
+        switch(interaction.guild.id){
+            case testServerId: //For the test server
+                idiotRoleId = testServerIdiotRole;
+                break;
+            case harstemServerId: //For the Harstem server
+                idiotRoleId = harstemServerIdiotRole;
+                break;
+            default: //For the monkey server
+                idiotRoleId = monkeyServerIdiotRole;
+        }
         console.log(`Idiot role id is: ${idiotRoleId} (Unidiot)`);
+        //Target for unidioting
         const target = interaction.options.getMember('target');
         if(!target){
             await interaction.reply({ content: 'User does not exist', flags: MessageFlags.Ephemeral });
