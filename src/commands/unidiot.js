@@ -1,6 +1,10 @@
 const {SlashCommandBuilder,MessageFlags} = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
-const {testServerId, testServerIdiotRole, harstemServerId, harstemServerIdiotRole, monkeyServerIdiotRole} = require("../config.json");
+
+const {testServerId, testServerIdiotRole,
+    harstemServerId, harstemServerIdiotRole,
+    monkeyServerIdiotRole}
+     = require("../config.json");
 
 module.exports = {
 	data: new SlashCommandBuilder()

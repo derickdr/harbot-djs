@@ -9,10 +9,22 @@ const numOfImages = imageFiles.length;
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('stare')
-		.setDescription('Stare at the screen with a random animal'),
+		.setDescription('Stare at the screen with a random animal')
+		.addStringOption(option =>
+			{ 
+			option.setName("image");
+			option.setDescription("Select a specific image of a staring animal (do not fill for random");
+			for(image of imageFiles)
+				option.addChoices({name: image, value: image});
+			return option;
+			}
+		),
 	async execute(interaction) {
-        index = Math.floor(Math.random()*numOfImages);
-        randomImage = path.join(imagesPath,imageFiles[index]);
-		await interaction.reply({files: [{ attachment: randomImage}]});
+        const index = Math.floor(Math.random()*numOfImages);
+        const selectedOption = interaction.options.getString("image");
+		const image = selectedOption ? //Check if an option has been selected
+					  path.join(imagesPath, selectedOption): //Select chosen image if true
+					  path.join(imagesPath, imageFiles[index]); //Select Random Image if false
+		await interaction.reply({files: [{ attachment: image}]});
 	},
 };
