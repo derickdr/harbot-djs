@@ -14,7 +14,7 @@ module.exports = {
             option.setName('time')
                   .setDescription('Time to be spent in idiot channel')),
 	async execute(interaction) {
-        const idiotRoleId = null;
+        let idiotRoleId;
         switch(interaction.guild.id){
             case testServerId: //For the test server
                 idiotRoleId = testServerIdiotRole;

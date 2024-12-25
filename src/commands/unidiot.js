@@ -1,6 +1,6 @@
 const {SlashCommandBuilder,MessageFlags} = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
-const {testServerId, testServerIdiotRole, harstemServerId, harstemServerIdiotRole} = require("../config.json");
+const {testServerId, testServerIdiotRole, harstemServerId, harstemServerIdiotRole, monkeyServerIdiotRole} = require("../config.json");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -12,7 +12,7 @@ module.exports = {
                   .setRequired(true)),
 	async execute(interaction) {
         //Check which server it is and assign the appropriate idiot role ID
-        const idiotRoleId = null;
+        let idiotRoleId;
         switch(interaction.guild.id){
             case testServerId: //For the test server
                 idiotRoleId = testServerIdiotRole;
