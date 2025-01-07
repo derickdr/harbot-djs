@@ -1,5 +1,5 @@
 const {SlashCommandBuilder} = require('discord.js');
-const copypastaList = require('../copypastas.js');
+const copypastaList = require('../../copypastas.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()

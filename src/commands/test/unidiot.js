@@ -14,7 +14,7 @@ module.exports = {
 	async execute(interaction) {
         //Check which server it is and assign the appropriate idiot role ID
 //--------------------CHANGE IDIOT ROLE ID HERE-----------------------------
-        const idiotRoleId = harstemServerIdiotRole;
+        const idiotRoleId = testServerIdiotRole;
 //--------------------------------------------------------------------------
         console.log(`Idiot role id is: ${idiotRoleId} (Unidiot)`);
         //Target for unidioting
