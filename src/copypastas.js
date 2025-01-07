@@ -80,14 +80,42 @@ const copypastaList = [
     {title:"cannons", text: "I am a nigerian prince and I want to give you 1000s of MMR with my only cannon build, "+
                             "I just need a small loan and your credit card information"
     },//15
-    {title:"idiots", text: "if terran and zerg think protoss is the easiest race to be good at, are they mentally "+
-                            "deficient compared to protoss players for picking inferior races?"
+    {title:"byun", text: "l was hanging out at Dreamhack AtIanta waiting in Iine for the bathroom...when l noticed "+
+                         "ByuN in the Iine for the urinaIs next to me! lt was eventuaIIy our turn to do our deeds to "+
+                         "nature, and during then the tension—boy did it mount! ByuN approached the urinaI with a "+
+                         "confident stride, a sense of purpose and a caIm urgency squared him up against the porceIain. "+
+                         "l, but a common man, matched his step and the feeIings of my heart became unpaIpabIe. My stream "+
+                         "began with a bit of effort...not the same for the King of Reapers; the power of his stream "+
+                         "reverberated through the waIIs of the Georgia WorId Congress Center. Decades of a refined, "+
+                         "and weII deveIoped kiIIer instict, and pixeI-perfect pointer precision were a bright, and "+
+                         "inexorabIe sight to feeI from the staII his adjacent. My wee wiIIy, and my disgustingIy simpIe, "+
+                         "and primitive desire to reIieve its backing bIadder was no match for the for the Champion of "+
+                         "the RebeIIion. l Ieft the staII and the bathroom thinking to myseIf, \"Are urinaIs in Korea this high?\""
     },//16
-    {title:"harstem", text: "How do you not know the streamer you idiot"
+    {title:"donted", text: "harstem I sent you a replay like 14 months ago complaining about the carrier. a few "+
+                             "weeks later I lost my job, one of my friends found out she was having a baby and we "+
+                             "were all very excited. i visited some of my girlfriends friends in atlanta and we "+
+                             "saw the aquarium. I got a new job, it pays better but im very busy. I made some new "+
+                             "friends, got started on some new projects. eventually they nerfed the thing I was "+
+                             "complaining about, it was carriers. they aren't such a problem anymore. that friend "+
+                             "I mentioned, she had her baby. i'm so happy for her, her and her husband will be "+
+                             "fantastic parents. I don't really play much anymore, but I still watch your videos "+
+                             "while I work. I know its on an old patch and its a replay of a diamond player fighting "+
+                             "6 base carrier with 5 base hydra but can you PLEASEEEE make a video on it. i once donted "+
+                             "you 500 euros on instagram if you remember"
     },//17
-    {title:"newton", text: "How do you like them apples?"},
+    {title:"brightest minds", text: "Some of the brightest minds in all of Starcraft are here to share their knowledge "+
+                            "on this Discord chat. I strongly encourage any new players from trying to gain as "+
+                            "much knowledge as possible from this great opportunity. For instance, I’ve been a "+
+                            "backseat GM player for 20 seasons in a row, and at this point I probably know as "+
+                            "much about the game as Serral (if not more)"},
     //19
-    {title:"dark hatchery", text: "https://clips.twitch.tv/SteamyVainStorkPRChase-E-PU1S26ZY2HSSoQ"},
+    {title:"petty insult", text: "There's so much of this pure nonsense.  People trying to make everything into a "+
+                                 "petty insult.  Why don't you just go play fortnite?  That is the game for this "+
+                                 "mentality.  It's just a waste of everyone's time.  It's the discord equivalent "+
+                                 "of people having nothing to offer so they just float their buildings to the "+
+                                 "corner.  I won't be here when it happens, but 9 of the next 10 comments will "+
+                                 "prove my point."},
     //20
     {title:"pasta", text: "Jeffrey Steingarten asserts that Arabs introduced pasta in the Emirate of Sicily in "+
                           "the ninth century, mentioning also that traces of pasta have been found in ancient "+
@@ -100,8 +128,21 @@ const copypastaList = [
                         "him a better zerg, as every time he loses money, he needs the tournmament win so he "+
                         "can bet on more horses. Very smart guy, shame about the gambling though"
     },//23
-    {title:"goldengate", text: "The golden gate bridge is called that because the bridge is made from gold "+
-                                "and then got painted red"
+    {title:"free country", text: "Yes. LITERALLY yes.\n\n"+
+
+                                 "This is a free country. I am allowed to do what I want. There is no law in "+
+                                 "the USA or in the universe saying that I must do X Y or Z.\n\n"+
+                                 
+                                 "When I first said this people's heads exploded.\n\n"+
+
+                                 "After some time, I learned, recognized, and admitted, \"yeah it probably makes "+
+                                 "sense to have optimized builds at higher levels of play.\" But it is still "+
+                                 "possible to have fun and play things that are not 100% pro approved.\n\n"+
+
+                                 "ALSO, I will never force builds down the throat of a new player who has barely "+
+                                 "touched starcraft. I refuse to do that and turn them off from the game forever, "+
+                                 "especially if they literally tell me \"I don't want to focus on a build right "+
+                                 "now I think it's too hard.\""
     },//24
     {title:"mmr", text: "imagine an mmr based on fun. after each game ur opponent rates how fun your "+
                         "gameplay was. the higher your opp rates you, the higher up in rank you go. "+

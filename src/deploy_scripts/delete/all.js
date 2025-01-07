@@ -12,7 +12,7 @@ const rest = new REST().setToken(token);
 rest.put(Routes.applicationCommands(clientId), { body: [] })
 	.then(() => console.log('Successfully deleted all application commands.'))
 	.catch(console.error);
-
+/*
 // for test server
 rest.put(Routes.applicationGuildCommands(clientId, testServerId), { body: [] })
 	.then(() => console.log('Successfully deleted all test server commands.'))
@@ -32,3 +32,4 @@ rest.put(Routes.applicationGuildCommands(clientId, monkeyServerId), { body: [] }
 rest.put(Routes.applicationGuildCommands(clientId, mosqueServerId), { body: [] })
 	.then(() => console.log('Successfully deleted all mosque server commands.'))
 	.catch(console.error);
+	*/
