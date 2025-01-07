@@ -1,10 +1,7 @@
 const {SlashCommandBuilder,MessageFlags} = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
 
-const {testServerId, testServerIdiotRole,
-    harstemServerId, harstemServerIdiotRole,
-    monkeyServerIdiotRole}
-     = require("../config.json");
+const {monkeyServerIdiotRole} = require("../../config.json");
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -16,17 +13,9 @@ module.exports = {
                   .setRequired(true)),
 	async execute(interaction) {
         //Check which server it is and assign the appropriate idiot role ID
-        let idiotRoleId;
-        switch(interaction.guild.id){
-            case testServerId: //For the test server
-                idiotRoleId = testServerIdiotRole;
-                break;
-            case harstemServerId: //For the Harstem server
-                idiotRoleId = harstemServerIdiotRole;
-                break;
-            default: //For the monkey server
-                idiotRoleId = monkeyServerIdiotRole;
-        }
+//--------------------CHANGE IDIOT ROLE ID HERE-----------------------------
+        const idiotRoleId = monkeyServerIdiotRole;
+//--------------------------------------------------------------------------
         console.log(`Idiot role id is: ${idiotRoleId} (Unidiot)`);
         //Target for unidioting
         const target = interaction.options.getMember('target');
