@@ -2,9 +2,14 @@
 
 Discord Bot built for [The Deck](https://discord.gg/cdgQFH29se), the home of [Kevin *"Harstem"* de Koning](https://liquipedia.net/starcraft2/Harstem)'s undying fleet of loyal star-sailors.
 
+## Dev TODO
+
+ - build command index  
+ - hardcode command returns  
+ - determine host  
 
 ## Maintainers
-    Lead: herbalist orangutan
+    Lead: dog
     Support: Esarel
 
 **Written in discord.js**
