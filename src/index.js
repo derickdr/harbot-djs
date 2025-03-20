@@ -7,20 +7,16 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 
 // Load the commands into client.commands
-const commandsPath = path.join(__dirname, 'commands');
-const commandsFolders = fs.readdirSync(commandsPath);
-for(const folder of commandsFolders){
-	const folderPath = path.join(commandsPath,folder);
-	const commandFiles = fs.readdirSync(folderPath);
-	for(const file of commandFiles){
-		const filePath = path.join(folderPath, file);
-		const command = require(filePath);
-		// Set a new item in the Collection with the key as the command name and the value as the exported module
-		if ('data' in command && 'execute' in command) {
-			client.commands.set(command.data.name, command);
-		} else {
-			console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
-		}
+const pathToCommandFolder = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(pathToCommandFolder);
+for(const file of commandFiles){
+	const pathToCommandFile = path.join(pathToCommandFolder,file);
+	const command = require(pathToCommandFile);
+	// Set a new item in the Collection with the key as the command name and the value as the exported module
+	if ('data' in command && 'execute' in command) {
+		client.commands.set(command.data.name, command);
+	} else {
+		console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
 	}
 }
 //Add Interaction Event Listener
