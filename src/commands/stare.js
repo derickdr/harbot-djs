@@ -2,7 +2,7 @@ const {SlashCommandBuilder} = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const currDir = __dirname;
-const imagesPath = path.join(currDir,'..','..','images');
+const imagesPath = path.join(currDir,'..','images');
 const imageFiles = fs.readdirSync(imagesPath);
 const numOfImages = imageFiles.length;
 
