@@ -10,8 +10,27 @@ module.exports = {
             option.setName('target')
                   .setDescription('The user to unidiot')
                   .setRequired(true)),
+
 	async execute(interaction) {
-        const idiotRoleId = interaction.guild.id == testServerId ? testServerIdiotRole: harstemServerIdiotRole;
+        let idiotRoleId;
+        switch(interaction.guild.id){
+            case harstemServerId:
+                idiotRoleId = harstemServerIdiotRole;
+                break;
+            case testServerId:
+                idiotRoleId = testServerIdiotRole;
+                break;
+            case monkeyServerId:
+                idiotRoleId = monkeyServerIdiotRole;
+                break;
+            default:
+                idiotRoleId = null;
+                break;
+        }
+        if(!idiotRoleId){
+            console.log("Idiot role ID is null. Exiting command");
+            return;
+        }
         console.log(`Idiot role id is: ${idiotRoleId} (Unidiot)`);
         const target = interaction.options.getMember('target');
         if(!target){

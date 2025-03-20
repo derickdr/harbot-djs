@@ -5,8 +5,8 @@ const path = require('node:path');
 
 const commands = [];
 
-const commandsPath = path.join(__dirname,'..','..', 'commands','global');
-const commandsFiles = fs.readdirSync(commandsPath);
+let commandsPath = path.join(__dirname,'..','..', 'commands');
+let commandsFiles = fs.readdirSync(commandsPath);
 for(const file of commandsFiles){
     const filePath = path.join(commandsPath, file);
 	const command = require(filePath);
@@ -17,7 +17,6 @@ for(const file of commandsFiles){
 		console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
 	}
 }
-
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(token);
 
