@@ -1,5 +1,5 @@
 const { REST, Routes } = require('discord.js');
-const { clientId, testServerId, harstemServerId, mosqueServerId, monkeyServerId, token } = require('../../config.json');
+const { clientId, testServerId, harstemServerId, mosqueServerId, monkeyServerId, toiletServerId, token } = require('../../config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -8,6 +8,7 @@ const harstemCommands = [];
 const testCommands = [];
 const mosqueCommands = [];
 const monkeyCommands = [];
+const toiletCommands = [];
 
 const commandsPath = path.join(__dirname,'..','..', 'commands');
 const commandsFiles = fs.readdirSync(commandsPath);
@@ -21,24 +22,29 @@ for(const file of commandsFiles){
 				harstemCommands.push(command.data.toJSON());
 				monkeyCommands.push(command.data.toJSON());
 				testCommands.push(command.data.toJSON());
-				//mosqueCommands.push(command);
+				//mosqueCommands.push(command.data.JSON);
+				//toiletCommands.push(command.data.toJSON());
 				break;
 			case 'unidiot.js':
 				harstemCommands.push(command.data.toJSON());
 				monkeyCommands.push(command.data.toJSON());
 				testCommands.push(command.data.toJSON());
+				//mosqueCommands.push(command.data.JSON);
+				//toiletCommands.push(command.data.toJSON());
 				break;
 			case 'stare.js':
 				harstemCommands.push(command.data.toJSON());
 				monkeyCommands.push(command.data.toJSON());
 				testCommands.push(command.data.toJSON());
 				mosqueCommands.push(command.data.toJSON());
+				toiletCommands.push(command.data.toJSON());
 				break;
 			case 'pasta.js':
 				harstemCommands.push(command.data.toJSON());
 				monkeyCommands.push(command.data.toJSON());
 				testCommands.push(command.data.toJSON());
 				mosqueCommands.push(command.data.toJSON());
+				toiletCommands.push(command.data.toJSON());
 				break;
 		}
 	} else {
@@ -51,14 +57,14 @@ const rest = new REST().setToken(token);
 // and deploy your commands!
 (async () => {
 	try {
-		console.log(`Started refreshing ${harstemCommands.length} application (/) commands for the Harstem server.`);
+		console.log(`Started refreshing ${harstemCommands.length} application (/) commands for Harstem's server.`);
 
 		// The put method is used to fully refresh all commands in the guild with the current set
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, harstemServerId),
 			{ body: harstemCommands }
 		);
-		console.log(`Started refreshing ${monkeyCommands.length} application (/) commands for the Monkey Island server.`);
+		console.log(`Started refreshing ${monkeyCommands.length} application (/) commands for the Monkey Island.`);
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, monkeyServerId),
 			{ body: monkeyCommands }
@@ -72,6 +78,11 @@ const rest = new REST().setToken(token);
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, testServerId),
 			{ body: testCommands }
+		);
+		console.log(`Started refreshing ${toiletCommands.length} application (/) commands for AllThingsToilet.`);
+		await rest.put(
+			Routes.applicationGuildCommands(clientId, toiletServerId),
+			{ body: toiletCommands }
 		);
 		console.log(`Successfully reloaded application (/) commands.`);
 	} catch (error) {
