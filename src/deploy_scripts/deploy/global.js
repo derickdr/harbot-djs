@@ -5,8 +5,8 @@ const path = require('node:path');
 
 const commands = [];
 
-let commandsPath = path.join(__dirname,'..','..', 'commands');
-let commandsFiles = fs.readdirSync(commandsPath);
+const commandsPath = path.join(__dirname,'..','..', 'commands');
+const commandsFiles = fs.readdirSync(commandsPath);
 for(const file of commandsFiles){
     const filePath = path.join(commandsPath, file);
 	const command = require(filePath);

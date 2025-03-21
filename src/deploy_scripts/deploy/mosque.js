@@ -5,8 +5,8 @@ const path = require('node:path');
 
 const commands = [];
 
-let commandsPath = path.join(__dirname,'..','..', 'commands');
-let commandsFiles = ['pasta.js','stare.js'];
+const commandsPath = path.join(__dirname,'..','..', 'commands');
+const commandsFiles = ['pasta.js','stare.js'];
 for(const file of commandsFiles){
     const filePath = path.join(commandsPath, file);
 	const command = require(filePath);
