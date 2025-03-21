@@ -58,17 +58,17 @@ const rest = new REST().setToken(token);
 			Routes.applicationGuildCommands(clientId, harstemServerId),
 			{ body: harstemCommands }
 		);
-		console.log(`Started refreshing ${monkeyCommands.length} application (/) commands for the Harstem server.`);
+		console.log(`Started refreshing ${monkeyCommands.length} application (/) commands for the Monkey Island server.`);
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, monkeyServerId),
 			{ body: monkeyCommands }
 		);
-		console.log(`Started refreshing ${mosqueCommands.length} application (/) commands for the Harstem server.`);
+		console.log(`Started refreshing ${mosqueCommands.length} application (/) commands for the Hassan's Emerald Mosque.`);
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, mosqueServerId),
 			{ body: mosqueCommands }
 		);
-		console.log(`Started refreshing ${testCommands.length} application (/) commands for the Harstem server.`);
+		console.log(`Started refreshing ${testCommands.length} application (/) commands for the HarBot Development Community.`);
 		await rest.put(
 			Routes.applicationGuildCommands(clientId, testServerId),
 			{ body: testCommands }
