@@ -122,7 +122,10 @@ const copypastaList = [
                           "Greece and that Jane Grigson believed the Marco Polo story to have originated in the "+
                           "1920s or 1930s in an advertisement for a Canadian spaghetti company."
     },//21
-    {title:"broodwar", text: "If SC1 was so good they wouldn't have needed to make a second game don't @ me"},
+    {title:"brain damage", text: "We have brain damage now from this. When I saw you lose I bashed my head into the wall "+
+                     "but since I live in America it instantly went through the dry wall so I had to "+
+                     "keep hitting until I found a structual support beam and kept smashing it until a "+
+                     "part of my house collapsed god FUCK I'm so angry"},
     //22
     {title:"soo", text: "I met soO at the local bookies once, betting on horses. He said the experience makes "+
                         "him a better zerg, as every time he loses money, he needs the tournmament win so he "+
