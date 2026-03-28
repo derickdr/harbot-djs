@@ -4,14 +4,18 @@ Discord Bot built for [The Deck](https://discord.gg/cdgQFH29se), the home of [Ke
 
 ## Dev TODO
 
- - build command index  
- - hardcode command returns  
- - determine host  
+ - [x] build command index  
+ - [x] hardcode command returns  
+ - [x] determine host
+ - [ ] change copypasta command from option to autocomplete to allow better searching and more options
+ - [ ] find a better host
+ - [ ] automatic clan war organizing? 
 
 ## Maintainers
-- Lead: dog @PotatoMussab
-- Support: Esarel @derickdr
+- Lead: [PotatoMussab](https://github.com/PotatoMussab)
+- Support: [Esarel](https://github.com/derickdr)
 
 **Written in discord.js**
 
-### *We have no idea what we are doing*
+> [!CAUTION]
+> We have no idea what we are doing, please send help
