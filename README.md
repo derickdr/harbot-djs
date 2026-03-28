@@ -9,8 +9,8 @@ Discord Bot built for [The Deck](https://discord.gg/cdgQFH29se), the home of [Ke
  - determine host  
 
 ## Maintainers
-    Lead: dog
-    Support: Esarel
+    Lead: dog (@PotatoMussab)
+    Support: Esarel (@derickdr)
 
 **Written in discord.js**
 
