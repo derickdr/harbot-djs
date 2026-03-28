@@ -7,6 +7,7 @@ Discord Bot built for [The Deck](https://discord.gg/cdgQFH29se), the home of [Ke
  - [x] build command index  
  - [x] hardcode command returns  
  - [x] determine host
+ - [ ] (From PotatoMussab:) I legit realized I was developing this without GitHub and I need to figure out a way to get the actual project into this repo
  - [ ] change copypasta command from option to autocomplete to allow better searching and more options
  - [ ] find a better host
  - [ ] automatic clan war organizing? 
